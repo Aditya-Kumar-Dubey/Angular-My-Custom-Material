@@ -1,0 +1,24 @@
+<div class="container">
+    <h1>UrJobMart.com</h1>
+    <button style="background: red;" (click)="startTour()">Start Tour</button>
+</div>
+
+<div class="btn">
+    <button id="openJobButton" class="left-button">Open Job</button>
+    <button id="homeButton" class="right-button">Home</button>
+</div>
+
+<div class="btn1">
+    <button id="source" class="left-button">Source</button>
+    <button id="martcom" class="right-button">mat.com</button>
+</div>
+
+<app-onboarding-tour *ngIf="showOnboarding"
+    [showOnboarding]="showOnboarding"
+    [currentPopupIndex]="currentPopupIndex"
+    [handleIndex]="4"
+    [numberOfStep]="4"
+    [nextPage]="'description'"
+    (finish)="finishOnboarding()"
+    (skip)="skipOnboarding()"
+></app-onboarding-tour>

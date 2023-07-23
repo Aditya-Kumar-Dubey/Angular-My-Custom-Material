@@ -1,0 +1,12 @@
+<div class="popup" [ngStyle]="getPopupPosition()" *ngIf="showOnboarding">
+    <h3>{{ popups[currentPopupIndex].title }}</h3>
+    <p>{{ popups[currentPopupIndex].content }}</p>
+    <div class="button-container">
+      <button style="background: burlywood;" *ngIf="!isFirstPopup()" (click)="previousPopup()">Previous</button> &nbsp;
+      <button style="background: green;" *ngIf="!isLastPopup()" (click)="nextPopup()">Next</button> &nbsp;
+      <button style="background: red;" *ngIf="isLastPopup()" (click)="finishOnboarding()">Finish</button> &nbsp;
+      <button style="background: greenyellow;" (click)="skipOnboarding()">Skip</button>
+    </div>
+  </div>
+  
+<app-backdrop></app-backdrop>  

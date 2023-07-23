@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+  }
+  
+  .left-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #33b78b;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .right-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #337ab7;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn {
+    display: flex;
+    justify-content: space-around;
+  }
+  .btn1 {
+    margin-top: 20%;
+    display: flex;
+    justify-content: space-around;
+  }

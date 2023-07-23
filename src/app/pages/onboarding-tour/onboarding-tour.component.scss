@@ -1,0 +1,17 @@
+.onboarding-container {
+    position: relative;
+}
+
+.popup {
+    position: absolute;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 10px;
+    z-index: 9999;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}

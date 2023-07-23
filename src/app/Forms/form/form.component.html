@@ -1,0 +1,34 @@
+<div class="container card shadow p-5">
+    <form [formGroup]="userForm">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <input type="email" formControlName="email" class="form-control" placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Subject textarea</label>
+            <textarea class="form-control" formControlName="subject" id="exampleFormControlTextarea1"
+                rows="3"></textarea>
+        </div>
+        <div class="mb-3" formArrayName="contact">
+            <label  class="form-label">Contact Details</label>
+            <div class="d-flex mt-1" *ngFor="let child of getContactControls(); let i = index" formGroupName="{{i}}">
+                <div class="cont-inp">
+                    <input class="ml-2" type="text" formControlName="type" class="form-control" placeholder="Type">
+                </div>
+                <div class="cont-inp">
+                    <input class="p-2" type="number" formControlName="contact" class="form-control"
+                        placeholder="Number">
+                </div>
+                <div style="margin-top: -12px;">
+                    <button class="btn btn-success" (click)="addContact()">Add</button>
+                </div>
+                <div style="margin-top: -12px; margin-left: 5px;">
+                    <button class="btn btn-success" (click)="removeContact(i)">Remove</button>
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <button type="button" (click)="safeForm()" class="btn btn-success">Submit</button>
+        </div>
+    </form>
+</div>
